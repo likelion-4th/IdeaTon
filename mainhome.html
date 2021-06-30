@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>mainhome</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .map{width:70%; text-align:center; margin:0px auto;}
+        .card{width:70%; text-align:center; margin:0px auto;}
+        .container{width:70%; text-align:center; margin:0px auto;}
+        .button-wrap {
+            width: 220px;
+            margin: 35px auto;
+            position: relative;
+            box-shadow: 0 0 400px 10px rgb(252, 252, 82);
+            border-radius: 30px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="button-wrap">
+        <div id="btn"></div>
+        <button type="button" class="togglebtn" onclick="login()">로그인</button>
+        <button type="button" class="togglebtn" onclick="register()">회원가입</button>
+    </div>
+    <div class="map">
+        <img src="http://www.uhoon.co.kr/files/attach/images/111/253/002/8b0a001776f924bc4414989b96ddeada.png" class="img-fluid" style="max-width:100%; height:auto;">
+    </div>  
+    <br>
+
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <br>
+
+    <ul class="mylist">
+        <div class="card" style="width: 50rem; ">
+            <div class="card-body">
+                <img src="https://image.winudf.com/v2/image1/Y29tLmZ1c2Vfc21hcnRfYmVhZGFsX2ljb25fMTYwODI2MTk0Ml8wMDY/icon.png?w=340&fakeurl=1" align="left" vspace="10" hspace="10"class="img-fluid" style="max-width:80px; height:auto;">
+                <div class="card-market" style="float: left;"><b>네네치킨</b></div>
+                <img src="https://cdn.icon-icons.com/icons2/2444/PNG/512/location_map_pin_mark_icon_148684.png" class="img-fluid" align="right"style="max-width: 23px; height:auto;">
+                <div class="card-time" style="float: right;">22:00 영남대 정문</div>
+                <br>
+                <div class="card-text " style="float:left;">남은 시간: 20분</div>
+                <img src="https://cdn.pixabay.com/photo/2014/04/02/10/54/man-304880_1280.png" class="img-fluid" align="right" hspace="8" style="max-width: 14px; height:auto;">
+                <div class="card-text " style="float:right;">소요 거리: 120m</div>
+                <br>
+                <div class="card-text " style="float:left;">10000원/13000원</div>
+                <div class="card-text " style="float:right;">3명/4명</div>
+                <br>
+                <br>
+                <div class="button"style="float:right">
+                    <a href="#" class="btn btn-warning">주문하기</a>
+                </div>
+            </div>
+          </div>
+          <div class="card" style="width: 50rem; ">
+            <div class="card-body">
+                <img src="https://scontent-gmp1-1.xx.fbcdn.net/v/t1.6435-9/113631685_1553877141461892_6668198970832213370_n.png?_nc_cat=106&ccb=1-3&_nc_sid=973b4a&_nc_ohc=aBOeBXEmxWkAX8fBhC9&_nc_ht=scontent-gmp1-1.xx&oh=2c8886d3cfb38da5318752cf96b1fd8a&oe=60E061FD" border="1" align="left" vspace="10" hspace="10"class="img-fluid" style="max-width:80px; height:auto;">
+                <div class="card-market" style="float: left;"><b>한솥</b></div>
+                <img src="https://cdn.icon-icons.com/icons2/2444/PNG/512/location_map_pin_mark_icon_148684.png" class="img-fluid" align="right" style="max-width: 23px; height:auto; ">
+                <div class="card-time" style="float: right;">18:00 영남대 기숙사 </div>
+                <br>
+                <div class="card-text " style="float:left;">남은 시간: 10분</div>
+                <img src="https://cdn.pixabay.com/photo/2014/04/02/10/54/man-304880_1280.png" class="img-fluid" align="right" hspace="8" style="max-width: 14px; height:auto;">
+                <div class="card-text " style="float:right;">소요 거리: 223m </div>
+                <br>
+                <div class="card-text " style="float:left;">5800원/8000원</div>
+                <div class="card-text " style="float:right;">1명/2명</div>
+                <br>
+                <br>
+                <div class="button"style="float:right">
+                    <a href="#" class="btn btn-warning">주문하기</a>
+                </div>
+            </div>
+          </div>
+    </ul>
+</body>
+
+</html>
