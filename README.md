@@ -23,7 +23,10 @@
 > ~~2. 메뉴 리스트 왼쪽 오른쪽 마진이 맞지가 않음.~~      
 > ~~3. 맵은 이미지로 사용하고 확대 축소가 가능하도록.~~   
 > ~~4. 한식 -> 배달 시간 순 버튼 눌럿을 때 노란색 표시.~~   
-> ~~5. 메뉴 버튼 활성화~~  
+> ~~5. 메뉴 버튼 활성화~~    
+> ~~6. marker이미지 바꾸기.~~   
+> ~~7. it관 기준으로 map 설정.~~  
+
 
 ## my work
 * bootstrap 흰색 버튼 삭제
@@ -32,11 +35,14 @@
 * pagination 구현
 * url 연결
 * javascript를 사용한 이벤트 제어
+* kakao map api 사용
 
 ## results
 ### login page
-<img src='results/login.png'>    
+<img src='results/login.png'>   
+
 ### location page    
-<img src='results/location.png'>    
+<img src='results/location.png'>
+
 ### main page     
 <img src='results/main.png'>   
