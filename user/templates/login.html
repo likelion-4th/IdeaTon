@@ -13,6 +13,7 @@
                     <button type="button" class="togglebtn" onclick="login()">로그인</button>
                     <button type="button" class="togglebtn" onclick="register()">회원가입</button>
                 </div>
+                <img src="{% static 'admin/img/logo_login.png'%}" style ="width:50%; height: auto; margin:-5% 26% -7%;"> 
                 <div class="social-icons">
                     <img src="{% static 'admin/img/ka.png'%}" alt="kakao">
                     <img src="{% static 'admin/img/fb.png'%}" alt="facebook">
@@ -21,6 +22,7 @@
                 </div>
                 <form id="login" action="{% url 'location'%}" class="input-group" method="post">
                     {% csrf_token %}
+                    <br><br><br><br><br>
                     <input type="text" class="input-field" placeholder="아이디" required>
                     <input type="password" class="input-field" placeholder="비밀번호" required>
                     <input type="checkbox" class="checkbox1"><span>로그인 상태 유지</span>

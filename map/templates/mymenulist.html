@@ -43,57 +43,39 @@
 
     <div class = "form-wrap">
     <div id="content"></div>
-
+    
+    
+    <!-- 장바구니 시작 -->
     <div class="card_market">
         <div class="card-header"><b>장바구니</b></div>
-        <div class="card-main">
-            <div class="buy-list">
-                <div class="buy-menu">(BEST)블랙마요</div>
-                <img src="http://pngimg.com/uploads/plus/plus_PNG95.png" align="left" class="img-fluid" hspace="2" style="max-width: 15px; height:auto; margin-top: 2.5px; ">
-                <div class="buy-charge"><b>18,900원</b></div>
-                <div class="num-button" style="float: right">
-                    <input type="text" name="pop_out" value="+" readonly="readonly" style="text-align:center; width:20px; height: 20px; font-weight: bold;"/>
-                    <input type="text" name="pop_out" value="1" readonly="readonly" style="text-align:center; width:20px; height: 20px;"/>
-                    <input type="text" name="pop_out" value="-" readonly="readonly" style="text-align:center; width:20px; height: 20px;font-weight: bold;"/>
-                </div>
-            </div>
-            <hr>
-            <div class="buy-list">
-                <div class="buy-menu">기름떡볶이 (투움바)</div>
-                <img src="http://pngimg.com/uploads/plus/plus_PNG95.png" align="left" class="img-fluid" hspace="2" style="max-width: 15px; height:auto;  margin-top: 2.5px;">
-                <div class="buy-charge"><b>4,900원</b></div>
-                <div class="num-button" style="float: right">
-                    <input type="text" name="pop_out" value="+" readonly="readonly" style="text-align:center; width:20px; height: 20px;font-weight: bold;"/>
-                    <input type="text" name="pop_out" value="1" readonly="readonly" style="text-align:center; width:20px; height: 20px; "/>
-                    <input type="text" name="pop_out" value="-" readonly="readonly" style="text-align:center; width:20px; height: 20px;font-weight: bold;"/>
-                </div>
-            </div>
-            <hr>
-            <br><br>
+        <div id="card-main">
+           <!-- dynamic added-->
  
-            
-
         </div>
         <div class="card-footer " style="text-align: right; color: rgb(75, 75, 75);">
-            <b>합계: 23,800원</b>
+            <b id='total'>합계: 0원</b>
             
         </div>
-        
+        <!-- <div class="page-wrapper">
+            <a class="btn trigger" href="#">결제하기</a>
+        </div> -->
     </div>
+    <!--장바구니 끝 -->
+    
 
     <div class="card-control">
         <div class="control-header"><b>설정</b></div>
         <div class="control-main">
             <div class="control-list">
                 <form>
-                    <label class="control-delivery-time" style="font-size: 13px;"><b>배달시간  </b><br><input type="time" style="border-radius: 5px; border-width: 1px; border-color: #f1f1f1;margin-top: 8px;margin-bottom: 5px;"></label>
+                    <label class="control-delivery-time" style="font-size: 13px;" for='settime'><b>배달시간  </b><br><input type="time" id='settime' style="border-radius: 5px; border-width: 1px; border-color: #f1f1f1;margin-top: 8px;margin-bottom: 5px;"></label>
                 </form>
             </div>
             <div class="control-list">
                 <label class="control-delivery-spot" style="font-size: 13px;">
                     <b>배달장소  </b>
                 </label>
-                <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                <select class="form-select form-select-sm" aria-label=".form-select-sm example" id='loc'>
                     <option selected>장소 설정</option>
                     <option value="1">영남대학교 기숙사</option>
                     <option value="2">영남대학교 기계관</option>
@@ -111,7 +93,7 @@
                 </label>
                 <div class="row mb-3">
                     <div class="col-sm-10">
-                      <input type="email" class="form-control form-control-sm" id="0" placeholder="0" style="width: 100px;">
+                      <input type="email" class="form-control form-control-sm" id="cnt" placeholder="0" style="width: 100px;">
                     </div>
                   </div>
             </div>
@@ -132,7 +114,7 @@
                 <br>
                 <div class="card-text " style="float:left; font-size: 13px;"><b>최소주문금액</b> 15900원</div>
                 <br>
-                <div class="card-text " style="float:left; font-size: 13px;"><b>배달팁</b> 3000원</div>
+                <div class="card-text " id='del_price' style="float:left; font-size: 13px;"><b>배달팁</b>3000원</div>
             </div>
         </div>
         
@@ -185,87 +167,87 @@
                     문의사항은 053-792-9206으로 전화주세요!! 
                 </p>
                 <div class="card" style="width: 100%;">
-                    <div class="card-body">
+                    <div class="card-body" onclick="btn_click()" id='blackmayo'>
                         <img src="https://www.puradakchicken.com/upload/menu/%E1%84%86%E1%85%A6%E1%84%82%E1%85%B2-100.png" align="right" class="img-fluid" style="max-width:90px; height:auto; border-radius: 5px; border-color: rgb(177, 177, 177);">
-                        <div class="menu-market"><b>(BEST)블랙마요</b></div>
+                        <div class="menu-market"><b id='blackmayo_sub'>(BEST)블랙마요</b></div>
                         <p class="menu-explain">(뼈)블랙알리오(1/2마리) + (뼈)고추마요 치킨(1/2마리) / 고추마요소스, 치자치킨무, 코카콜라</p>
                         <br>
-                        <div class="menu-money">18,900원</div>
+                        <div class="menu-money" id='blackmayo_price'>18,900원</div>
                     </div>
                 </div>
                 <div class="card" style="width: 100%;">
-                    <div class="card-body">
+                    <div class="card-body" onclick="btn_click()" id='blacktoom'>
                         <img src="https://www.puradakchicken.com/upload/menu/%E1%84%8E%E1%85%B5%E1%84%8F%E1%85%B5%E1%86%AB_%E1%84%87%E1%85%B3%E1%86%AF%E1%84%85%E1%85%A2%E1%86%A8%E1%84%90%E1%85%AE%E1%84%8B%E1%85%AE%E1%86%B7%E1%84%87%E1%85%A10.png" align="right" class="img-fluid" style="max-width:90px; height:auto; border-radius: 5px; border-color: rgb(177, 177, 177);">
-                        <div class="menu-market"><b>블랙투움바</b></div>
+                        <div class="menu-market"><b id='blacktoom_sub'>블랙투움바</b></div>
                         <p class="menu-explain">(뼈)블랙알리오(1/2마리) + (뼈)투움바 치킨(1/2마리) / 고추마요소스, 치자치킨무, 코카콜라</p>
                         <br>
-                        <div class="menu-money">19,900원</div>
+                        <div class="menu-money" id='blacktoom_price'>19,900원</div>
                     </div>
                 </div>
                 <div class="card" style="width: 100%;">
-                    <div class="card-body">
+                    <div class="card-body" onclick="btn_click()" id='poora'>
                         <img src="https://www.puradakchicken.com/upload/menu/%E1%84%86%E1%85%A6%E1%84%82%E1%85%B2-010.png" align="right" class="img-fluid" style="max-width:90px; height:auto; border-radius: 5px; border-color: rgb(177, 177, 177);">
-                        <div class="menu-market"><b>푸라닭</b></div><br>
+                        <div class="menu-market"><b id='poora_sub'>푸라닭</b></div><br>
                         <p class="menu-explain"></p>
                         <br>
-                        <div class="menu-money">15,900원</div>
+                        <div class="menu-money" id='poora_price'>15,900원</div>
                     </div>
                 </div>
                 <div class="card" style="width: 100%;">
-                    <div class="card-body">
+                    <div class="card-body" onclick="btn_click()" id='blacksoon'>
                         <img src="https://www.puradakchicken.com/upload/menu/%E1%84%86%E1%85%A6%E1%84%82%E1%85%B2-050.png" align="right" class="img-fluid" style="max-width:90px; height:auto; border-radius: 5px; border-color: rgb(177, 177, 177);">
-                        <div class="menu-market"><b>순살블랙알리오</b></div><br>
+                        <div class="menu-market"><b id='blacksoon_sub'>순살블랙알리오</b></div><br>
                         <p class="menu-explain"></p>
                         <br>
-                        <div class="menu-money">18,900원</div>
+                        <div class="menu-money" id='blacksoon_price'>18,900원</div>
                     </div>
                 </div>
                 <div class="card" style="width: 100%;">
-                    <div class="card-body">
+                    <div class="card-body" onclick="btn_click()" id='soongochu'>
                         <img src="https://www.puradakchicken.com/upload/menu/(%EA%B5%90%EC%B2%B4)%EC%88%9C%EC%82%B4%EA%B3%A0%EC%B6%94%EB%A7%88%EC%9A%940.jpg" align="right" class="img-fluid" style="max-width:90px; height:auto; border-radius: 5px; border-color: rgb(177, 177, 177);">
-                        <div class="menu-market"><b>순살 고추마요</b></div><br>
+                        <div class="menu-market"><b id='soongochu_sub'>순살 고추마요</b></div><br>
                         <p class="menu-explain"></p>
                         <br>
-                        <div class="menu-money">18,900원</div>
+                        <div class="menu-money" id='soongochu_price'>18,900원</div>
                     </div>
                 </div>
                 <div class="card" style="width: 100%;">
-                    <div class="card-body">
+                    <div class="card-body" onclick="btn_click()" id='tender'>
                         <img src="https://www.puradakchicken.com/upload/menu/PR(M)0.jpg" align="right" class="img-fluid" style="max-width:90px; height:auto; border-radius: 5px; border-color: rgb(177, 177, 177);">
-                        <div class="menu-market"><b>텐더 치바로우 (매드갈릭)</b></div>
+                        <div class="menu-market"><b id='tender_sub'>텐더 치바로우 (매드갈릭)</b></div>
                         <p class="menu-explain">[NEW]닭가슴살의 상식을 뒤집다. 푸라닭의 프리미엄 닭가슴살 메뉴 라입업! '푸레스트(P-Reast)'가 처음으로 선보이는 새로운 요리</p>
                         <br>
-                        <div class="menu-money">9,900원</div>
+                        <div class="menu-money" id='tender_price'>9,900원</div>
                     </div>
                 </div>
                 <div class="card" style="width: 100%;">
-                    <div class="card-body">
+                    <div class="card-body" onclick="btn_click()" id='tenderchi'>
                         <img src="https://www.puradakchicken.com/upload/menu/PR(S)0.jpg" align="right" class="img-fluid" style="max-width:90px; height:auto; border-radius: 5px; border-color: rgb(177, 177, 177);">
-                        <div class="menu-market"><b>텐더 치바로우 (달콤양념)</b></div>
+                        <div class="menu-market"><b id='tenderchi_sub'>텐더 치바로우 (달콤양념)</b></div>
                         <p class="menu-explain">[NEW]'푸라닭의 프리미엄 닭가슴살 메뉴 라인업 '푸레스트(P-Reast)의 스페셜 메뉴!
                             누구나 부담없이 즐길 수 있는...</p>
                         <br>
-                        <div class="menu-money">9,900원</div>
+                        <div class="menu-money" id='tenderchi_price'>9,900원</div>
                     </div>
                 </div>
                 <div class="card" style="width: 100%;">
-                    <div class="card-body">
+                    <div class="card-body" onclick="btn_click()" id='tenderevil'>
                         <img src="https://www.puradakchicken.com/upload/menu/PR(D)0.jpg" align="right" class="img-fluid" style="max-width:90px; height:auto; border-radius: 5px; border-color: rgb(177, 177, 177);">
-                        <div class="menu-market"><b>텐더 치바로우 (악마)</b></div>
+                        <div class="menu-market"><b id='tenderevil_sub'>텐더 치바로우 (악마)</b></div>
                         <p class="menu-explain">[NEW]'오직 푸라닭의 프리미엄 닭가슴살 메뉴 라인업 '푸레스트(P-Reast)에서만
                             즐길 수 있는 신개념 닭가슴살 요리! 부드럽고 촉촉한 닭가슴살이...
                         </p>
                         <br>
-                        <div class="menu-money">9,900원</div>
+                        <div class="menu-money" id='tenderevil_price'>9,900원</div>
                     </div>
                 </div>
                 <div class="card" style="width: 100%;">
-                    <div class="card-body">
+                    <div class="card-body" onclick="btn_click()" id='oil'>
                         <img src="https://www.puradakchicken.com/upload/menu/%E1%84%86%E1%85%A6%E1%84%82%E1%85%B2_PC-790.png" align="right" class="img-fluid" style="max-width:90px; height:auto; border-radius: 5px; border-color: rgb(177, 177, 177);">
-                        <div class="menu-market"><b>기름떡볶이 (투움바)</b></div>
+                        <div class="menu-market"><b id='oil_sub'>기름떡볶이 (투움바)</b></div>
                         <p class="menu-explain">한입 먹기좋은 떡을 튀겨내어 푸라닭 투움바 소스에 버무린 매콤 고소 떡볶이</p>
                         <br>
-                        <div class="menu-money">4,900원</div>
+                        <div class="menu-money" id='oil_price'>4,900원</div>
                     </div>
                 </div>
             </div>
@@ -352,20 +334,20 @@
                     <hr style="height: 4px; margin-top: -16px; color: #bebebe;">
                     <div class="popup-market"><b>푸라닭 시지점</b></div>
                     <div class="popup-money"style="float: left;"> 배달 시간</div>
-                    <div class="popup-money"style="float: right;"><b>20:30</b></div>
+                    <div class="popup-money"style="float: right;"><b id='postime'>20:30</b></div>
                     <br>
                     <div class="popup-money"style="float: left;"> 배달 장소</div>
-                    <div class="popup-money"style="float: right;"><b>영남대 상경관</b></div>
+                    <div class="popup-money"style="float: right;"><b id='loc_post'>영남대 상경관</b></div>
                     <br>
                     <div class="popup-money"style="float: left;"> 배달 인원</div>
-                    <div class="popup-money"style="float: right;"><b>3명</b></div>
+                    <div class="popup-money"style="float: right;"><b id='cnt_post'>3명</b></div>
                     <br>
                     <hr style="height: 1px;  color: #5c5c5c; ">
                     <div class="popup-money"style="float: left;"> 상품 금액</div>
-                    <div class="popup-money"style="float: right;"><b>23,800원</b></div>
+                    <div class="popup-money"style="float: right;" id='pay'><b>0원</b></div>
                     <br>
                     <div class="popup-money"style="float: left;"> 배달팁</div>
-                    <div class="popup-money"style="float: right;"><b>3000원 <i class="fas fa-arrow-right" sy></i>  1,000원</b></div>
+                    <div class="popup-money"style="float: right;"><b id='tell_del_price'>3,000원 <i class="fas fa-arrow-right" sy></i>  1,000원</b></div>
                     <br>
                     <hr style="height: 1px;  color: #5c5c5c; ">
                     <div class="popup-title"style="float: left;"> 이용약관 동의</div>
@@ -440,22 +422,20 @@
                     <br>
                     
 
-                    <p><button class="btn bttn"><a href="#layer2" style="color: #000; text-decoration: none;"class="btn-example">24,800원 결제하기</a></button></p>
+                    <p id='final_payment'><button class="btn bttn own_trigger"><a style="color: #000; text-decoration: none;"class="btn-example">0원 결제하기</a></button></p>
             </div>
             </div>
         </div>
 
         <!-- 주문완료 -->
-        <div class="dim-layer">
-            <div class="dimBg"></div>
-            <div id="layer2" class="pop-layer">
-
+        <div class="modal_wrapper_final">
+            <div class='modal_fianl'>
                 <div class="head">
                     <a class="btn-close trigger" href="#">
                     <!-- <i class="fa fa-times" aria-hidden="true" ></i> -->
                     </a>
                 </div>
-                <div class="pop-container">
+                <div class="content">
 
                     <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
                     <div class="popup-moon"><b>달밤의 배달</b><img src="{% static 'admin/img/logo.png'%}" style="width: 10%; height: auto;"></div>
@@ -463,27 +443,29 @@
                     <hr style="height: 4px; margin-top: -16px; color: #bebebe;">
                     <div class="popup-market"><b >주문 신청 완료</b></div><br>
                     <div class="popup-money"style="float: left;"> 배달 시간</div>
-                    <div class="popup-money"style="float: right;"><b>20:30</b></div>
+                    <div class="popup-money"style="float: right;"><b id='destime'>20:30</b></div>
                     <br>
                     <div class="popup-money"style="float: left;"> 배달 장소</div>
-                    <div class="popup-money"style="float: right;"><b>영남대 상경관</b></div>
+                    <div class="popup-money"style="float: right;"><b id='loc_last'>영남대 상경관</b></div>
                     <br>
                     <div class="popup-money"style="float: left;"> 배달 인원</div>
-                    <div class="popup-money"style="float: right;"><b>3명</b></div>
+                    <div class="popup-money"style="float: right;"><b id='cnt_last'>3명</b></div>
                     <br>
                     <hr style="height: 1px;  color: #5c5c5c; ">
                     <div class="popup-money"style="float: left;"> 최소주문금액</div>
-                    <div class="popup-money"style="float: right;"><b>23,800/15,900</b></div>
+                    <div class="popup-money"style="float: right;"><b id='myorder'>23,800/15,900</b></div>
                     <br>
                     <div class="popup-money"style="float: left;"> 배달팁</div>
-                    <div class="popup-money"style="float: right;"><b>3,000원 <i class="fas fa-arrow-right" sy></i> 1,000원</b></div>
+                    <div class="popup-money"style="float: right;"><b id='final_del_price'>3,000원 <i class="fas fa-arrow-right" sy></i> 1,000원</b></div>
                     <br>
                     <hr style="height: 1px;  color: #5c5c5c; ">
                     
-                    <p><button class="btn bttn">확인 완료</button></p>
+                    <p><button class="btn bttn" onclick="confirm_payment()">확인 완료</button></p>
 
             </div>
         </div> 
+
+    </div>
 
     </div>
     <!-- partial -->
@@ -512,45 +494,64 @@
                     event.target.classList.toggle('payment_back');
                 }
             </script>
+
+                <!-- my function -->
             <script>
-                $('.btn-example').click(function(){
-                        var $href = $(this).attr('href');
-                        layer_popup($href);
-                    });
-                    function layer_popup(el){
-                
-                        var $el = $(el);    //레이어의 id를 $el 변수에 저장
-                        var isDim = $el.prev().hasClass('dimBg'); //dimmed 레이어를 감지하기 위한 boolean 변수
-                
-                        isDim ? $('.dim-layer').fadeIn() : $el.fadeIn();
-                
-                        var $elWidth = ~~($el.outerWidth()),
-                            $elHeight = ~~($el.outerHeight()),
-                            docWidth = $(document).width(),
-                            docHeight = $(document).height();
-                
-                        // 화면의 중앙에 레이어를 띄운다.
-                        if ($elHeight < docHeight || $elWidth < docWidth) {
-                            $el.css({
-                                marginTop: -$elHeight /2,
-                                marginLeft: -$elWidth/2
-                            })
-                        } else {
-                            $el.css({top: 0, left: 0});
-                        }
-                
-                        $el.find('a.btn-layerClose').click(function(){
-                            isDim ? $('.dim-layer').fadeOut() : $el.fadeOut(); // 닫기 버튼을 클릭하면 레이어가 닫힌다.
-                            return false;
-                        });
-                
-                        $('.layer .dimBg').click(function(){
-                            $('.dim-layer').fadeOut();
-                            return false;
-                        });
-                
+                function btn_click()
+                {
+                    
+                    var word=document.getElementById(event.target.id+'_sub').innerHTML;
+                    var price_html=document.getElementById(event.target.id+'_price').innerHTML;
+                    var total_element=document.getElementById('total');
+                    var total_price=total_element.innerHTML.replace(/[^0-9]/g,'');
+                    var final_payment=document.getElementById('final_payment');
+                    total_price=Number(total_price);
+                    var real_price=price_html.replace(/[^0-9]/g,'');
+                    real_price=Number(real_price);
+                    var element=document.getElementById('card-main');
+                    var pay_reflect=document.getElementById('pay');
+                    element.innerHTML+='<div class="buy-list">'+
+                                '<div class="buy-menu">'+word+'</div>'+
+                                '<img src="http://pngimg.com/uploads/plus/plus_PNG95.png" align="left" class="img-fluid" hspace="2" style="max-width: 15px; height:auto; margin-top: 2.5px; ">'+
+                                '<div class="buy-charge"><b>'+price_html+'</b></div>'+
+                                '<div class="num-button" style="float: right">'+
+                                '<input type="text" name="pop_out" value="+" readonly="readonly" style="text-align:center; width:20px; height: 20px; font-weight: bold;"/>'+
+                                '<input type="text" name="pop_out" value="1" readonly="readonly" style="text-align:center; width:20px; height: 20px;"/>'+
+                                '<input type="text" name="pop_out" value="-" readonly="readonly" style="text-align:center; width:20px; height: 20px;font-weight: bold;"/>'+
+                                '</div>'+
+                                '</div><hr>'
+                    total_price+=real_price;
+                    var total_price_str=String(total_price);
+                    var final_price=total_price;
+                    var final_price_str=String(final_price);
+                    if(parseInt(total_price/1000)!=0)
+                    {
+                        
+                        var tmp=total_price_str.split('').reverse().join('');
+                        tmp=tmp.slice(0,3)+','+tmp.slice(3,tmp.length);
+                        total_price_str=tmp.split('').reverse().join('');
                     }
-                            </script>
+                    
+                    if(parseInt(final_price/1000)!=0)
+                    {
+                        
+                        var tmp=final_price_str.split('').reverse().join('');
+                        tmp=tmp.slice(0,3)+','+tmp.slice(3,tmp.length);
+                        final_price_str=tmp.split('').reverse().join('');
+                       
+                    }
+                    total_element.innerHTML='<b>합계 : '+total_price_str+'원</b>';
+                    pay_reflect.innerHTML='<b>'+total_price_str+'원</b>';
+                    //final_payment.innerHTML='<button class="btn bttn own_trigger">'+final_price_str+'원 결제하기</button>';
+                    final_payment.innerHTML='<button class="btn bttn own_trigger"><a style="color: #000; text-decoration: none;"class="btn-example">'+final_price_str+'원 결제하기</a></button>';
+                    
+                    
+                }
+                function confirm_payment()
+                {
+                    location.replace("{% url 'mainmenu'%}");
+                }
+            </script>
 </body>
 
 </html>
