@@ -17,14 +17,27 @@
         @import url('https://fonts.googleapis.com/css?family=Khula:400,700');
 
     </style>
-
+    <script language='javascript'>
+        function loaded()
+        {
+            document.all.loading.style.display='none';
+            document.all.wrap.style.display='block';
+        }
+    </script>
 </head>
-<body class="page">
+<body class="page" onload="loaded()">
+    <div id="loading" runat="server" style="position:absolute;left:50%;top:50%;margin-top:-140px;margin-left:-250px;DISPLAY: block;text-align:center;">
+        <img src="{% static 'admin/gif/load.gif'%}" width="500" height="250" border="0">
+        <br><br>
+        
+    </div>
         <!-- Nav Bar Start -->
-
+        <div id="wrap" runat="server" style="DISPLAY:none">
         <div class="navbar navbar-expand-lg bg-dark navbar-dark">
             <div class="container-fluid">
-                <a href="{% url 'main'%}" class="navbar-brand">달밤의 배달</a>
+                <a href="{% url 'mainmenu'%}" class="navbar-brand">달밤의 배달
+                    <img src="{% static 'admin/img/logob.png'%}" style ="margin-left: -5%; margin-bottom: 1%;width:38px;">
+                </a>
                 <!-- <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button> -->
@@ -67,10 +80,10 @@
             <h6 id='sub_menu' onclick='switchMenu()'><a>한식</a></h6>
             <h6 ><a>분식</a></h6>
             <h6 ><a>일식</a></h6>
-            <h6 ><a>치킨</a></h6>
-            <h6 ><a>피자</a></h6>
             <h6 ><a>중식</a></h6>
             <h6 ><a>양식</a></h6>
+            <h6><a>치킨</a></h6>
+            <h6 ><a>피자</a></h6>
         </ul>
         
     </div><br><br>
@@ -92,7 +105,7 @@
         <div class="card">
             <div class="card-body">
                 <img src="http://img1.tmon.kr/cdn3/deals/2021/05/05/929868014/929868014_front_97649_07ec2.jpg" border="1" align="left" vspace="10" hspace="10"class="img-fluid" style="max-width:130px; height:auto; border-radius: 5px;border-color: rgb(177, 177, 177); margin: 0px 10px 0px 2px;">
-                <div class="card-market" style="float: left; "><b>본도시락</b></div>
+                <div class="card-market" style="float: left; "><b>본도시락 경산정평점</b></div>
                 <img src="{% static 'admin/img/deliverpos.png'%}" class="img-fluid" align="right"style="max-width: 23px; height:auto;">
      
                 <div class="card-time" style="float: right;">17:50 영남대 정문</div>
@@ -102,12 +115,13 @@
                 <img src="https://cdn.pixabay.com/photo/2014/04/02/10/54/man-304880_1280.png" class="img-fluid" align="right" hspace="8" style="max-width: 14px; height:auto;">
                 <div class="card-text " style="float:right; font-size: 13px;">소요 거리: 320m</div>
                 <br>
-                <div class="card-text " style="float:left; font-size: 13px;">남은 시간: 20분</div>
+                <div class="card-text " style="float:left; font-size: 13px;"><b>남은 시간</b> 20분</div>
                 
                 <br>
-                <div class="card-text " style="float:left; font-size: 13px;">10000원/13000원</div>
+                <div class="card-text " style="float:left; font-size: 13px;"><b>최소주문금액 </b>10000원/13000원</div>
                 <div class="card-text " style="float:right; font-size: 14px;">3명/4명</div>
                 <br>
+                <div class="card-text " style="float:left; font-size: 13px;"><b>배달팁 </b>4000원 <i class="fas fa-arrow-right" sy></i> 1000원</div>
                 <div class="button"style="float:right">
                     <a href="#" class="btn btn-warning">주문하기</a>
                 </div>
@@ -116,7 +130,7 @@
         <div class="card"  >
             <div class="card-body">
                 <img src="https://scontent-gmp1-1.xx.fbcdn.net/v/t1.6435-9/113631685_1553877141461892_6668198970832213370_n.png?_nc_cat=106&ccb=1-3&_nc_sid=973b4a&_nc_ohc=aBOeBXEmxWkAX8fBhC9&_nc_ht=scontent-gmp1-1.xx&oh=2c8886d3cfb38da5318752cf96b1fd8a&oe=60E061FD" border="1" align="left" vspace="10" hspace="10"class="img-fluid" style="max-width:130px; height:auto;border-radius: 5px;border-color: rgb(177, 177, 177); margin: 0px 10px 0px 2px;">
-                <div class="card-market" style="float: left;"><b>한솥</b></div>
+                <div class="card-market" style="float: left;"><b>한솥도시락 영남대원룸촌점</b></div>
                 <img src="{% static 'admin/img/deliverpos.png'%}" class="img-fluid" align="right" style="max-width: 23px; height:auto; ">
                 <div class="card-time" style="float: right;">18:00 영남대 기숙사 </div>
                 <br>
@@ -125,20 +139,21 @@
                 <img src="https://cdn.pixabay.com/photo/2014/04/02/10/54/man-304880_1280.png" class="img-fluid" align="right" hspace="8" style="max-width: 14px; height:auto;">
                 <div class="card-text " style="float:right; font-size: 13px;">소요 거리: 223m </div>
                 <br>
-                <div class="card-text " style="float:left; font-size: 13px;">남은 시간: 10분</div>
+                <div class="card-text " style="float:left; font-size: 13px;"><b>남은 시간</b> 10분</div>
                 <br>
-                <div class="card-text " style="float:left; font-size: 13px;">5800원/8000원</div>
+                <div class="card-text " style="float:left; font-size: 13px;"><b>최소주문금액 </b>5800원/8000원</div>
                 <div class="card-text " style="float:right; font-size: 14px;">1명/2명</div>
                 <br>
+                <div class="card-text " style="float:left; font-size: 13px;"><b>배달팁 </b>3000원 <i class="fas fa-arrow-right" sy></i> 1500원</div>
                 <div class="button"style="float:right">
-                    <a href="#" class="btn btn-warning">주문하기</a>
+                    <a href="{% url 'menulist'%}" class="btn btn-warning">주문하기</a>
                 </div>
             </div>
         </div>
         <div class="card"  >
             <div class="card-body">
                 <img src="https://cdn.imweb.me/upload/S202101044762d402002b1/1672c6224036a.png" border="1" align="left" vspace="10" hspace="10"class="img-fluid" style="max-width:130px; height:auto;border-radius: 5px; border-color: rgb(177, 177, 177);margin: 0px 10px 0px 2px; " >
-                <div class="card-market" style="float: left;"><b>핵밥</b></div>
+                <div class="card-market" style="float: left;"><b>핵밥 영대점</b></div>
                 <img src="{% static 'admin/img/deliverpos.png'%}" class="img-fluid" align="right" style="max-width: 23px; height:auto; ">
                 <div class="card-time" style="float: right;">18:30 영남대 기계관 </div>
                 <br>
@@ -147,11 +162,12 @@
                 <img src="https://cdn.pixabay.com/photo/2014/04/02/10/54/man-304880_1280.png" class="img-fluid" align="right" hspace="8" style="max-width: 14px; height:auto;">
                 <div class="card-text " style="float:right; font-size: 13px;">소요 거리: 430m </div>
                 <br>
-                <div class="card-text " style="float:left; font-size: 13px;">남은 시간: 4분</div>
+                <div class="card-text " style="float:left; font-size: 13px;"><b>남은 시간</b> 4분</div>
                 <br>
-                <div class="card-text " style="float:left; font-size: 13px;">8900원/15000원</div>
+                <div class="card-text " style="float:left; font-size: 13px;"><b>최소주문금액 </b>8900원/15000원</div>
                 <div class="card-text " style="float:right; font-size: 14px;">2명/3명</div>
                 <br>
+                <div class="card-text " style="float:left; font-size: 13px;"><b>배달팁 </b>3000원 <i class="fas fa-arrow-right" sy></i> 1000원</div>
                 <div class="button"style="float:right">
                     <a href="#" class="btn btn-warning">주문하기</a>
                 </div>
@@ -160,7 +176,7 @@
         <div class="card"  >
             <div class="card-body">
                 <img src="https://modo-phinf.pstatic.net/20200104_21/1578108138615ssYNl_JPEG/mosaVmwQqu.jpeg?type=f320_320"  border="1" align="left" vspace="10" hspace="10"class="img-fluid" style="max-width:130px; height:auto; border-radius: 5px; border-color: rgb(177, 177, 177); margin: 0px 10px 0px 2px;">
-                <div class="card-market" style="float: left;"><b>합성동돼지국밥</b></div>
+                <div class="card-market" style="float: left;"><b>합성동돼지국밥 시지점</b></div>
                 <img src="{% static 'admin/img/deliverpos.png'%}" class="img-fluid" align="right" style="max-width: 23px; height:auto; ">
                 <div class="card-time" style="float: right;">19:00 천마아트센터  </div>
                 <br>
@@ -169,11 +185,12 @@
                 <img src="https://cdn.pixabay.com/photo/2014/04/02/10/54/man-304880_1280.png" class="img-fluid" align="right" hspace="8" style="max-width: 14px; height:auto;">
                 <div class="card-text " style="float:right; font-size: 13px;">소요 거리: 130m </div>
                 <br>
-                <div class="card-text " style="float:left; font-size: 13px;">남은 시간: 23분</div>
+                <div class="card-text " style="float:left; font-size: 13px;"><b>남은 시간</b> 23분</div>
                 <br>
-                <div class="card-text " style="float:left; font-size: 13px;">7500원/14000원</div>
+                <div class="card-text " style="float:left; font-size: 13px;"><b>최소주문금액 </b>7500원/14000원</div>
                 <div class="card-text " style="float:right; font-size: 14px;">1명/2명</div>
                 <br>
+                <div class="card-text " style="float:left; font-size: 13px;"><b>배달팁 </b>3000원 <i class="fas fa-arrow-right" sy></i> 1500원</div>
                 <div class="button"style="float:right">
                     <a href="#" class="btn btn-warning">주문하기</a>
                 </div>
@@ -326,6 +343,7 @@
                     }
                 }
             </script>
+        
 </body>
 
 </html>

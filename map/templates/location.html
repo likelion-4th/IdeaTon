@@ -4,9 +4,21 @@
         <title>위치 설정</title>
         <link rel="stylesheet" href="{% static 'admin/css/location_style.css'%}">
         <script src="https://kit.fontawesome.com/8eb5905426.js" crossorigin="anonymous"></script>
+        <script language='javascript'>
+            function loaded()
+            {
+                document.all.loading.style.display='none';
+                document.all.blockwrap.style.display='block';
+            }
+        </script>
     </head> 
-    <body>
-
+    <body onload='loaded()'>
+        <!-- loading -->
+        <div id="loading" runat="server" style="position:absolute;left:50%;top:50%;margin-top:-140px;margin-left:-250px;DISPLAY: block;text-align:center;">
+            <img src="{% static 'admin/gif/load.gif'%}" width="500" height="250" border="0">
+            <br><br>
+        </div>
+        <div id="blockwrap" runat="server" style="DISPLAY:none">
         <div class="wrap">
             <div class="form-wrap">
                 <div class="button-wrap"></div>
@@ -16,7 +28,7 @@
                       <input type="search" class="input-search" placeholder="지번, 건물명, 도로명으로 검색" >
                     </div>
                     <div class="search">
-                        <form method='post' action="{% url 'main'%}">
+                        <form method='post' action="{% url 'mainmenu'%}">
                             {% csrf_token %}
                             <button type='submit' class="submit" autofocus ><i class="fas fa-map-marker-alt"></i> 현 위치로 주소 설정</button>
                         </form>
@@ -34,6 +46,6 @@
                 
         </div>
         </div>
-
+    </div>
     </body>
 </html>

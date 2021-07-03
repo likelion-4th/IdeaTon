@@ -48,6 +48,8 @@
     color: rgb(0, 0, 0);
     font-weight: bold;
     box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+    box-shadow: 0 3px 7px 0 rgba(0,0,0,0.2), 0 2px 5px 0 rgba(0,0,0,0.19);
+
 }
 .new-menu {
     float: center;
@@ -62,6 +64,7 @@
     color: rgb(0, 0, 0);
     font-weight: bold;
     box-shadow: 0 3px 7px 0 rgba(0,0,0,0.2), 0 2px 5px 0 rgba(0,0,0,0.19);
+
 }
 .new-menu:hover {
     float: center;
@@ -73,6 +76,7 @@
     box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
 
 }
+
 #map{
     width:90%;
     height:300px;
@@ -80,80 +84,9 @@
     border-radius: 5px;
     text-align:center;
     margin:0px auto;
-    /* margin-bottom: 20px; */
     box-shadow: 0 3px 7px 0 rgba(0,0,0,0.2), 0 2px 5px 0 rgba(0,0,0,0.19);
-}
-.mylist{
-    margin-bottom: 50px;
-}
-.card{
-    width:94%;
-    margin-left:10px ;
-    text-align:center; 
-    box-shadow: 0 3px 7px 0 rgba(0,0,0,0.2), 0 2px 5px 0 rgba(0,0,0,0.19);
-}
-.card:hover{
-    background-color:whitesmoke;
-}
-.container{width:70%; text-align:center; margin:0px auto;}
-#menu-food{
-    margin:0px auto;
-    width: 950px;
-    height: 0px;
-}
-
-#menu-food ul h6{
-    float: left;
-    width: 13%;
-    height: 100%;
-    line-height: 50px;
-    text-align: center;
-    margin-bottom: -5px;
-}
-#menu-food ul h6 a{
-    display: block;
-}
-#menu-food ul h6 a:hover{
-    text-decoration : underline;
-    font-weight: 950;
-    border-radius: 30px;
-    transition: .5s;
-}
-
-#menu-choose{
-    margin:0px auto;
-    width: 950px;
-    height: 60px;
 
 
-}
-
-#menu-choose ul h6{
-    float: left;
-    width: 15%;
-    height: 100%;
-    line-height: 50px;
-    text-align: center;
-}
-#menu-choose ul h6 a{
-    display: block;
-}
-#menu-choose ul h6 a:hover{
-    background-color:  #f8e15f;
-    color: rgb(0, 0, 0);
-    font-weight:bold;
-    border-radius: 30px;
-
-}
-#sub_menu{
-    font-weight: bold;
-    text-decoration: underline;
-}
-#time_til{
-    background-color:  #f8e15f ;
-    color: rgb(0, 0, 0);
-    font-weight:bold;
-    border-radius: 30px;
 }
 .form-wrap {
     width: 900px;
@@ -162,38 +95,53 @@
     background: #fff;
     padding: 10px;
     overflow: hidden;
-    padding: 45px 0 15px 0;
+    padding: 30px 0 15px 0;
     box-shadow: 0 0 100px 9px rgb(214, 214, 214);
+}
+/* menu  card*/
+
+.container
+{
+    width: 93.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
-.pagination {
-    position:absolute;
-    left: 50%;
-    margin-left: -160px;
-    /* margin-bottom: 20px; */
-    margin-top:10px;
-  }
-  
-  .pagination a {
-    
-    color: black;
-    /* float: left; */
-    padding: 8px 16px;
-    text-decoration: none;
-  }
-  
-  .pagination a.active {
-    background-color: #f8e15f;
-    /* color: white; */
-    border-radius: 5px;
-  }
-  
-  .pagination a:hover:not(.active) {
-    background-color: #ddd;
-    border-radius: 5px;
-  }
+.button{
+    width: 195px;
+    height: 150px;
+    background: rgb(255, 255, 255);
+    position: relative;
+    padding-left: 0px;
+    margin: 0px auto;
+    margin-bottom: 10px;
+    text-align: center;
+    /* border-radius: 5px; */
+    transition: all 0.1s ease-in-out;
+    font-size: 25px;
+    box-shadow: -6px -6px 5px rgba(228, 226, 226, 0, 8), 6px 6px 10px rgba(0,0,0,0.2);
+    color: rgb(107, 107, 107);
+    line-height: 100px;
+    border:1px solid rgb(224, 224, 224);
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,0.2), 0 2px 5px 0 rgba(0,0,0,0.19);
 
+}
+.button:hover{
+    background-color:rgb(235, 235, 235);
+
+
+}
+.active{
+    box-shadow: inset -5px -5px 5px rgba(225, 225, 225, 0, 5), inset 8px 0px 16px rgba(0,0,0,0.1);
+    color:  rgb(0, 0, 0);
+    background-color:rgb(235, 235, 235);
+
+}
+.make_own{
+    background-color:#ffd904 ;
+}
 /**********************************/
 /*********** Nav Bar CSS **********/
 /**********************************/
@@ -221,7 +169,7 @@
 
 }
 
-.navbar .navbar-brand {
+.navbar .navbar-brand img {
     max-width: 100%;
     max-height: 40px;
 }
@@ -244,11 +192,6 @@
     font-weight: 600;
     color: #000000;
     text-decoration:none;
-}
-
-.sub_menu{
-    text-decoration: none;
-    color:black;
 }
 
 

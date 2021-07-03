@@ -21,5 +21,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',user.views.login,name='login'),
     path('location/',map.views.location,name='location'),
-    path('main/',map.views.main,name='main'),
+    path('mainmenu/main/',map.views.main,name='main'),
+    path('mainmenu/',map.views.mainmenu,name='mainmenu'),
+    path('mainmenu/mymenu/',map.views.mymenu,name='mymenu'),
+    path('mainmenu/main/menulist/',map.views.menulist,name='menulist'),
+    path('mainmenu/mymenu/mymenulist/',map.views.mymenulist,name='mymenulist'),
+
 ]
