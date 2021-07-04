@@ -18,9 +18,22 @@
         @import url('https://fonts.googleapis.com/css?family=Khula:400,700');
 
     </style>
-
+    <script language='javascript'>
+        function loaded()
+        {
+            document.all.loading.style.display='none';
+            document.all.wrap.style.display='block';
+        }
+    </script>
 </head>
-<body class="page">
+<body class="page" onload='loaded()'>
+    <!-- loading -->
+    <div id="loading" runat="server" style="position:absolute;left:50%;top:50%;margin-top:-140px;margin-left:-250px;DISPLAY: block;text-align:center;">
+        <img src="{% static 'admin/gif/load.gif'%}" width="500" height="250" border="0">
+        <br><br>
+        
+    </div>
+    <div id="wrap" runat="server" style="DISPLAY:none">
         <!-- Nav Bar Start -->
 
         <div class="navbar navbar-expand-lg bg-dark navbar-dark">
@@ -194,6 +207,7 @@
                 });
             }
             </script>
+    </div>
 </body>
     <script>
         function button_click() {

@@ -240,7 +240,7 @@ html ul.tabs li.active, html ul.tabs li.active a:hover  {
 {
 
     width: 115%;
-    /* margin-left: -15px; */
+    margin-left: -15px;
     box-shadow: 0 3px 7px 0 rgba(0,0,0,0.2), 0 2px 5px 0 rgba(0,0,0,0.19);
 }
 
@@ -261,11 +261,11 @@ html ul.tabs li.active, html ul.tabs li.active a:hover  {
 
 a.btn {
   width: 224px;
-  /* padding: 6px 0;
+  padding: 6px 0;
   position: absolute;
   top: 24.5%;
   left: 80.3%;
-  transform: translate(-25%, -80.3%); */
+  transform: translate(-25%, -80.3%);
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
   font-weight: 700;
   text-align: center;
@@ -348,7 +348,7 @@ a.btn {
   height: 40px;
   padding: 12px 30px;
   overflow: hidden;
-  background: #fdff7d;
+  background: #ffdd6e;
 
 }
 
